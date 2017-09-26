@@ -111,3 +111,21 @@ with open("c.csv", "w") as c:
     writer = csv.writer(c)
     writer.writerows(final_c)
 
+# TSNE
+data_tsne_a = TSNE(n_components=2).fit_transform(data_a)
+data_tsne_b = TSNE(n_components=2).fit_transform(data_b)
+data_tsne_c = TSNE(n_components=2).fit_transform(data_c)
+
+tsne_a = np.c_[data_tsne_a,disease_name_a]
+tsne_b = np.c_[data_tsne_b,disease_name_b]
+tsne_c = np.c_[data_tsne_c,disease_name_c]
+
+with open("tsne_a.csv", "w") as x:
+    writer = csv.writer(x)
+    writer.writerows(tsne_a)
+with open("tsne_b.csv", "w") as y:
+    writer = csv.writer(y)
+    writer.writerows(tsne_b)
+with open("tsne_c.csv", "w") as z:
+    writer = csv.writer(z)
+    writer.writerows(tsne_c)
