@@ -179,7 +179,7 @@ for i in range(0,len(input_data)):
     transactions_list.append(temp_set)
 
 
-for z in range(30,80,10):
+for z in range(50,60,10):
     
     #Calculate support
     support = z * len(input_data)//100
@@ -275,63 +275,99 @@ for z in range(30,80,10):
 
     # --------------------- Print results of Template 1 queries ---------------------------------
     cnt11,result11 = template1("RULE","ANY",['G59_Up'],rule_left,rule_right,rule_list)
-    print('(result11, cnt) = asso_rule.template1("RULE", "ANY", ["G59_Up"]) '+str(cnt11))
+    #print('(result11, cnt) = asso_rule.template1("RULE", "ANY", ["G59_Up"]) '+str(cnt11))
+    #print(result11)
+    #print()
     
     cnt12,result12 = template1("RULE","NONE",['G59_Up'],rule_left,rule_right,rule_list)
-    print('(result11, cnt) = asso_rule.template1("RULE", "NONE", ["G59_Up"]) '+str(cnt12))
+    #print('(result11, cnt) = asso_rule.template1("RULE", "NONE", ["G59_Up"]) '+str(cnt12))
+    #print(result12)
+    #print()
     
     cnt13,result13 = template1("RULE",1,['G59_Up','G10_Down'],rule_left,rule_right,rule_list)
-    print('(result13, cnt) = asso_rule.template1("RULE", 1, ["G59_Up","G10_Down"]) '+str(cnt13))
+    #print('(result13, cnt) = asso_rule.template1("RULE", 1, ["G59_Up","G10_Down"]) '+str(cnt13))
+    #print(result13)
+    #print()
     
-    cnt14,result14 = template1("BODY","ANY",['G59_Up'],rule_left,rule_right,rule_list)
-    print('(result14, cnt) = asso_rule.template1("BODY", "ANY", ["G59_Up"]) '+str(cnt14))
+    cnt14,result14 = template1("BODY","ANY",['G51_Up'],rule_left,rule_right,rule_list)
+    print('(result14, cnt) = asso_rule.template1("BODY", "ANY", ["G51_Up"]) '+str(cnt14))
+    #print(result14)
+    #print()
     
-    cnt15,result15 = template1("BODY","NONE",['G59_Up'],rule_left,rule_right,rule_list)
-    print('(result15, cnt) = asso_rule.template1("BODY", "NONE", ["G59_Up"]) '+str(cnt15))
+    cnt15,result15 = template1("BODY","NONE",['G1_Up'],rule_left,rule_right,rule_list)
+    print('(result15, cnt) = asso_rule.template1("BODY", "NONE", ["G1_Up"]) '+str(cnt15))
+    #print(result15)
+    #print()
     
     cnt16,result16 = template1("BODY",1,['G59_Up','G10_Down'],rule_left,rule_right,rule_list)
-    print('(result16, cnt) = asso_rule.template1("BODY", 1, ["G59_Up","G10_Down"]) '+str(cnt16))
+    #print('(result16, cnt) = asso_rule.template1("BODY", 1, ["G59_Up","G10_Down"]) '+str(cnt16))
+    #print(result16)
+    #print()
     
     cnt17,result17 = template1("HEAD","ANY",['G59_Up'],rule_left,rule_right,rule_list)
-    print('(result17, cnt) = asso_rule.template1("HEAD", "ANY", ["G59_Up"]) '+str(cnt17))
+    #print('(result17, cnt) = asso_rule.template1("HEAD", "ANY", ["G59_Up"]) '+str(cnt17))
+    #print(result17)
+    #print()
     
     cnt18,result18 = template1("HEAD","NONE",['G59_Up'],rule_left,rule_right,rule_list)
-    print('(result18, cnt) = asso_rule.template1("HEAD", "NONE", ["G59_Up"]) '+str(cnt18))
+    #print('(result18, cnt) = asso_rule.template1("HEAD", "NONE", ["G59_Up"]) '+str(cnt18))
+    #print(result18)
+    #print()
     
     cnt19,result19 = template1("HEAD",1,['G59_Up','G10_Down'],rule_left,rule_right,rule_list)
-    print('(result19, cnt) = asso_rule.template1("HEAD", 1, ["G59_Up","G10_Down"]) '+str(cnt19))
+    #print('(result19, cnt) = asso_rule.template1("HEAD", 1, ["G59_Up","G10_Down"]) '+str(cnt19))
+    #print(result19)
+    #print()
     
     print()
     
     # --------------------- Print results of Template 2 queries ---------------------------------
     cnt21,result21 = template2("RULE",3,rule_left,rule_right,rule_list)
-    print('(result21, cnt) = asso_rule.template2("RULE", 3) ' +str(cnt21))
+    #print('(result21, cnt) = asso_rule.template2("RULE", 3) ' +str(cnt21))
+    #print(result21)
+    #print()
     
     cnt22,result22 = template2("BODY",2,rule_left,rule_right,rule_list)
     print('(result22, cnt) = asso_rule.template2("BODY", 2) '+ str(cnt22))
+    #print(result22)
+    #print()
     
     cnt23,result23 = template2("HEAD",1,rule_left,rule_right,rule_list)
-    print('(result23, cnt) = asso_rule.template2("HEAD", 1) '+str(cnt23))
+    #print('(result23, cnt) = asso_rule.template2("HEAD", 1) '+str(cnt23))
+    #print(result23)
+    #print()
     
     print()
     
     # --------------------- Print results of Template 3 queries ---------------------------------
     cnt31,result31 = template3("1or1", rule_left,rule_right,rule_list, "BODY", "ANY", ['G10_Down'],"HEAD", 1, ['G59_Up'])
-    print('(result31, cnt) = asso_rule.template3("1or1", "BODY", "ANY", ["G10_Down"],"HEAD", 1, ["G59_Up"]) ' + str(cnt31))
+    #print('(result31, cnt) = asso_rule.template3("1or1", "BODY", "ANY", ["G10_Down"],"HEAD", 1, ["G59_Up"]) ' + str(cnt31))
+    #print(result31)
+    #print()
     
-    cnt32,result32 = template3("1and1", rule_left,rule_right,rule_list, "BODY", "ANY", ['G10_Down'],"HEAD", 1, ['G59_Up'])
-    print('(result32, cnt) = asso_rule.template3("1and1", "BODY", "ANY", ["G10_Down"],"HEAD", 1, ["G59_Up"]) ' + str(cnt32))
+    cnt32,result32 = template3("1and1", rule_left,rule_right,rule_list, "BODY", "ANY", ['G1_Up'],"HEAD", 2, ['G59_Up'])
+    #print('(result32, cnt) = asso_rule.template3("1and1", "BODY", "ANY", ["G10_Down"],"HEAD", 1, ["G59_Up"]) ' + str(cnt32))
+    #print(result32)
+    #print()
     
-    cnt33,result33 = template3("1or2", rule_left,rule_right,rule_list, "BODY", "ANY", ['G10_Down'],"HEAD", 2)
-    print('(result33, cnt) = asso_rule.template3("1or2", "BODY", "ANY", ["G10_Down"],"HEAD", 2) ' + str(cnt33))
+    cnt33,result33 = template3("1or2", rule_left,rule_right,rule_list, "BODY", "ANY", ['G1_Up'],"HEAD", 2)
+    print('(result33, cnt) = asso_rule.template3("1or2", "BODY", "ANY", ["G1_Up"],"HEAD", 2) ' + str(cnt33))
+    #print(result33)
+    #print()
     
-    cnt34,result34 = template3("1and2", rule_left,rule_right,rule_list, "BODY", "ANY", ['G10_Down'],"HEAD", 2)
-    print('(result34, cnt) = asso_rule.template3("1and2", "BODY", "ANY", ["G10_Down"],"HEAD", 2) ' + str(cnt34))
+    cnt34,result34 = template3("1and2", rule_left,rule_right,rule_list, "BODY", "ANY", ['G1_Up'],"HEAD", 2)
+    print('(result34, cnt) = asso_rule.template3("1and2", "BODY", "ANY", ["G1_Up"],"HEAD", 2) ' + str(cnt34))
+    #print(result34)
+    #print()
     
     cnt35,result35 = template3("2or2",rule_left,rule_right,rule_list, "BODY", 1,"HEAD", 2)
-    print('(result35, cnt) = asso_rule.template3("2or2", "BODY", 1, "HEAD", 2) '+str(cnt35))
+    #print('(result35, cnt) = asso_rule.template3("2or2", "BODY", 1, "HEAD", 2) '+str(cnt35))
+    #print(result35)
+    #print()
     
     cnt36,result36 = template3("2and2",rule_left,rule_right,rule_list, "BODY", 1,"HEAD", 2)
-    print('(result35, cnt) = asso_rule.template3("2and2", "BODY", 1, "HEAD", 2) '+str(cnt36))
-
+    #print('(result35, cnt) = asso_rule.template3("2and2", "BODY", 1, "HEAD", 2) '+str(cnt36))
+    #print(result36)
+    #print()
+    
     print()
