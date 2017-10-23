@@ -4,14 +4,10 @@ A. TO GENERATE THE REDUCED DIMENSION DATAPOINTS:
 	1. Store the input file in the same folder as the folder which contains the file 'pca.py'
 	2. Run the 'pca.py'
 	3. It will prompt you to enter a file name. Here enter the input file name which you stored in the same folder as pca.py'.
-	4. Once you enter the filename it will generate three files of the following format:
-
-	pca_(no. of input file).csv --> This file contains the data points of the reduced dimension along with the mapping of the corresponding disease name using the PCA algorithm.
-
-	tsne_(no. of input file).csv --> This file contains the data points of the reduced dimension along with the mapping of the corresponding disease name using the TSNE algorithm.
-
-	svd_(no. of input file).csv --> This file contains the data points of the reduced dimension along with the mapping of the corresponding disease name using the SVD algorithm.
-
+	4. Once you enter the filename it will generate three files of the following format:  
+		-pca_(no. of input file).csv --> This file contains the data points of the reduced dimension along with the mapping of the corresponding disease name using the PCA algorithm.
+		-tsne_(no. of input file).csv --> This file contains the data points of the reduced dimension along with the mapping of the corresponding disease name using the TSNE algorithm.
+		-svd_(no. of input file).csv --> This file contains the data points of the reduced dimension along with the mapping of the corresponding disease name using the SVD algorithm.
 	5. Enter new file if you wish to or type exit to stop.
 
 B. TO GENERATE SCATTER PLOT OF THE REDUCED DIMENSIONS:
